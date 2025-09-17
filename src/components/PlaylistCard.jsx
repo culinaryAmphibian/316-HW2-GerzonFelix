@@ -58,7 +58,7 @@ export default class PlaylistCard extends React.Component {
                     id={"playlist-" + keyNamePair.name}
                     className='playlist-card'
                     type='text'
-                    onKeyPress={this.handleKeyPress}
+                    onKeyDown={this.handleKeyPress}
                     onBlur={this.handleBlur}
                     onChange={this.handleUpdate}
                     defaultValue={keyNamePair.name}
@@ -87,7 +87,7 @@ export default class PlaylistCard extends React.Component {
                         id={"delete-list-" + keyNamePair.key}
                         className="card-button"
                         onClick={this.handleDeleteList}
-                        value={"\u2715"} />
+                        value="🗑" />
                 </div>
             );
         }
